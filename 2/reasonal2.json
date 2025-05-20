@@ -1,0 +1,94 @@
+{
+    "FailedResults": {
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl6.2.3": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"公共\"\r\n并且 建筑 的 建筑名称 contains \"餐饮\" 或 contains \"饮食\" 或 contains \"饭店\"\r\n并且 建筑 的 场所是否使用燃气 equals \"是\"\r\n那么 建筑 有 不少于 1 标签或说明 满足 标签或说明 的 Name regex \"@(隔墙|砖墙|防火墙|防火玻璃)\" 且 regex \"@[2-9]\\d*(\\.*\\d+)?(h|H|小时)\" 或 regex \"@(隔墙|砖墙|防火墙|防火玻璃)\" 且 regex \"@(1[2-9][0-9]|[2-9]\\d{2})(min|分钟)\" 或 contains \"砌块\" 或 contains \"轻质砖\" 或 contains \"砖墙\" 且 regex \"@(隔断|分隔|墙面)\"",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "建筑为公共餐饮场所且使用燃气，但未设置足够的防火隔墙或相关防火设备。"
+                }
+            ],
+            "NaturalLanguage": "建筑内的下列部位应采用耐火极限不低于2．00h的防火隔墙与其他部位分隔，墙上的门、窗应采用乙级防火门、窗，确有困难时，可采用防火卷帘，但应符合本规范第6．5．3条的规定：    1 甲、乙类生产部位和建筑内使用丙类液体的部位；    2 厂房内有明火和高温的部位；    3 甲、乙、丙类厂房(仓库)内布置有不同火灾危险性类别的房间；    4 民用建筑内的附属库房，剧场后台的辅助用房；    5 除居住建筑中套内的厨房外，宿舍、公寓建筑中的公共厨房和其他建筑内的厨房；    6 附设在住宅建筑内的机动车库。"
+        },
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl8.3.11": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"餐厅\" 或 contains \"饮食\" 或 contains \"餐饮\"\r\n并且 建筑 的 场所建筑面积 > 1000\r\n并且 建筑 的 场所是否使用燃气 equals \"是\"\r\n那么 建筑 有 不少于 1 标签或说明 满足 标签或说明 的 Name contains \"烟罩\" 且 contains \"灭火\" 或 contains \"厨房\" 且 contains \"自动灭火\" 或 contains \"厨房\" 且 contains \"灭火装置\"",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "餐馆面积大于1000平方米，未在排油烟罩处设置自动灭火装置。"
+                }
+            ],
+            "NaturalLanguage": "餐厅建筑面积大于1000m2的餐馆或食堂，其烹饪操作间的排油烟罩及烹饪部位应设置自动灭火装置，并应在燃气或燃油管道上设置与自动灭火装置联动的自动切断装置。食品工业加工场所内有明火作业或高温食用油的食品加工部位宜设置自动灭火装置。"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl6.4.3": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"民用\"\r\n并且 建筑 的 高度 <= 100\r\n并且 建筑 有 楼层\r\n并且 楼层 有 标签\r\n并且 标签 的 Name regex \"@.{0,2}(冷库|仓库|总库|库房|(冷冻|工具|布草|冷藏|行李|储物|储藏)(房|间|室|库|库房)?):\"\r\n那么 楼层 有 不少于 1 门 满足 门 的 Name contains \"乙\" 或 contains \"甲\"",
+                    "errPairValue": [
+                        "DYNAMIC-ELEVATION-(3)"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-ELEVATION-(3)]标高--标高 3"
+                    ],
+                    "Reason": "标高3的门未满足乙级防火门的要求。"
+                }
+            ],
+            "NaturalLanguage": "除建筑直通室外和屋面的门可采用普通门外，下列部位的门的耐火性能不应低于乙级防火门的要求，且其中建筑高度大于100m的建筑相应部位的门应为甲级防火门：    1 甲、乙类厂房，多层丙类厂房，人员密集的公共建筑和其他高层工业与民用建筑中封闭楼梯间的门；    2 防烟楼梯间及其前室的门；    3 消防电梯前室或合用前室的门；    4 前室开向避难走道的门；    5 地下、半地下及多、高层丁类仓库中从库房通向疏散走道或疏散楼梯的门；    6 歌舞娱乐放映游艺场所中的房间疏散门；    7 从室内通向室外疏散楼梯的疏散门；    8 设置在耐火极限要求不低于2.00h的防火隔墙上的门"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl8.3.3": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 notcontains \"住宅\" \r\n并且 建筑 有 楼层\r\n并且 楼层 有 房间\r\n并且 房间 的 Name contains \"可燃\" 且 contains \"气体\" 或 contains \"可燃\" 且 contains \"蒸气\" 或 contains \"天然气\" 或 contains \"燃气\" 或 contains \"厨房\" 或 contains \"熟食加工\" 或 contains \"蒸煮\" 或 contains \"烹饪\" 或 contains \"热加工\" 或 contains \"热厨\" 或 contains \"明档\"\r\n并且 房间 的 Name notcontains \"竖井\"\r\n那么 楼层 有 可燃气体探测器",
+                    "errPairValue": [
+                        "DYNAMIC-ELEVATION-(3)"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-ELEVATION-(3)]标高--标高 3"
+                    ],
+                    "Reason": "标高3缺少可燃气体探测器。"
+                },
+                {
+                    "SNL": "如果 建筑 的 建筑名称 notcontains \"住宅\"\r\n并且 建筑 的 场所是否使用燃气 equals \"是\"\r\n那么 建筑 有 可燃气体探测器",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "建筑使用燃气，但缺少可燃气体探测器。"
+                }
+            ],
+            "NaturalLanguage": "除住宅建筑的燃气用气部位外，建筑内可能散发可燃气体、可燃蒸气的场所应设置可燃气体探测报警装置。"
+        }
+    },
+    "consistencySummarySimplified": {
+        "snlCorrectRateInHitSNLs": "一致性审查中有效的 SNL 中通过率 = 0.8214285714285714",
+        "snlGeneralizedAvailable": "一致性审查中 SNL 有效的总数量 = 28",
+        "snlHitProportion": "一致性审查中 SNL 有效的占比 = 0.16568047337278108",
+        "snlIncorrectRateInHitSNLs": "一致性审查中有效的 SNL 中不通过率 = 0.17857142857142858",
+        "snlNotPassNumInGeneralizedAvailableSNLs": "一致性审查中有效的 SNL 中不通过的 SNL 数量 = 5",
+        "snlNumConsistency": "一致性审查中 SNL 总数量 = 169",
+        "snlPassNumInGeneralizedAvailableSNLs": "一致性审查中有效的 SNL 中通过的 SNL 数量 = 23",
+        "summaryStr": "总结 = 在本次审查中，共对 169 条 SNL 进行了一致性审查\n其中，共有 28 条 SNL 有效，占比 16.6 %\n在一致性审查有效的 SNL 中，共有 23 条 SNL 通过，占所有有效的 SNL 的 82.1 %\n在一致性审查有效的 SNL 中，共有 5 条 SNL 不通过，占所有有效的 SNL 的 17.9 %"
+    },
+    "consistencySummarySimplifiedForArticle": {
+        "articleCorrectRateInHitArticles": "一致性审查中有效的条文中通过率 = 0.7647058823529411",
+        "articleGeneralizedAvailable": "一致性审查中条文有效的总数量 = 17",
+        "articleHitProportion": "一致性审查中条文有效的占比 = 0.4857142857142857",
+        "articleIncorrectRateInHitArticles": "一致性审查中有效的条文中不通过率 = 0.23529411764705882",
+        "articleNotPassNumInGeneralizedAvailableArticles": "一致性审查中有效的条文中不通过的条文数量 = 4",
+        "articleNumConsistency": "一致性审查中条文总数量 = 35",
+        "articlePassNumInGeneralizedAvailableArticles": "一致性审查中有效的条文中通过的条文数量 = 13",
+        "summaryStr": "总结 = 在本次审查中，共对 35 条条文进行了一致性审查\n其中，共有 17 条条文有效，占比 48.6 %\n在一致性审查有效的条文中，共有 13 条条文通过，占所有有效的条文的 76.5 %\n在一致性审查有效的条文中，共有 4 条条文不通过，占所有有效的条文的 23.5 %"
+    }
+}

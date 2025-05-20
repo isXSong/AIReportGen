@@ -1,0 +1,226 @@
+{
+    "FailedResults": {
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl10.3.6": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"歌舞\" 或 contains \"录像\" 或 contains \"夜总会\" 或 contains \"卡拉OK\" 或 contains \"KTV\" 或 contains \"游艺\" 或 contains \"洗浴\" 或 contains \"桑拿\" 或 contains \"休闲中心\" 或 contains \"歌舞娱乐放映游艺\"\r\n那么 建筑 有 地面方向标志灯",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "建筑名称包含'歌舞'或'娱乐'场所，但未按规定设置地面疏散指示标志。"
+                }
+            ],
+            "NaturalLanguage": "下列建筑或场所应在疏散走道和主要疏散路径的地面上增设能保持视觉连续的灯光疏散指示标志或蓄光疏散指示标志：    1 总建筑面积大于8000m²的展览建筑；    2 总建筑面积大于5000m²的地上商店；    3 总建筑面积大于500m²的地下或半地下商店；    4 歌舞娱乐放映游艺场所；    5 座位数超过1500个的电影院、剧场，座位数超过3000个的体育馆、会堂或礼堂；    6 车站、码头建筑和民用机场航站楼中建筑面积大于3000m²的候车、候船厅和航站楼的公共区。"
+        },
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl5.5.18": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"公共\"\r\n并且 建筑 有 楼层\r\n并且 楼层 有 功能空间\r\n并且 功能空间 的 是否经常有人停留 equals \"是\"\r\n并且 功能空间 的 总-门-个数 <= 1\r\n并且 功能空间 边界有 门\r\n那么 门 的 宽度 > 900",
+                    "errPairValue": [
+                        "2134668 831.0"
+                    ],
+                    "ElementInfo": [
+                        "[2134668]门-单扇门--M_10  疏散门"
+                    ],
+                    "Reason": "疏散门的宽度为831.0mm，小于规范要求的900mm。"
+                }
+            ],
+            "NaturalLanguage": "除本规范另有规定外，公共建筑内疏散门和安全出口的净宽度不应小于0.9m，疏散走道和疏散楼梯的净宽度不应小于1.10m。高层公共建筑内楼梯间的首层疏散门、首层疏散外门、疏散走道和疏散楼梯的最小净宽度应符合表5.5.18的规定：建筑类别 | 楼梯间的首层疏散门、首层疏散外门 | 走道（单面布房/双面布房）| 疏散楼梯高层医疗建筑| 1.30| 1.40/1.50| 1.30其他高层公共建筑建筑 | 1.20| 1.30/1.40| 1.20"
+        },
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl5.5.19": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 人员密集场所 equals \"是\"\r\n并且 建筑 有 楼层\r\n并且 楼层 的 计算标高 = 1\r\n并且 楼层 有 房间 A\r\n并且 楼层 有 房间 B\r\n并且 房间 A 不 是 房间 B\r\n并且 房间 A 有 门 A\r\n并且 房间 B 有 门 A\r\n并且 房间 A 的 Name notcontains \"厨房\" 且 notcontains \"熟食加工\" 且 notcontains \"蒸煮\" 且 notcontains \"烹饪\" 且 notcontains \"热加工\" 且 notcontains \"粗加工\" 且 notcontains \"热厨\" 且 notcontains \"明火操作\" 且 notcontains \"明火厨房\" 且 notcontains \"明档\" 且 notcontains \"楼梯间\" 且 notcontains \"前室\"\r\n并且 房间 A 的 Name contains \"走道\"\r\n并且 房间 B 的 是否经常有人停留 equals \"是\"\r\n并且 房间 B 有 门 B\r\n并且 门 的 宽度 <= 1400\r\n并且 房间 A 有 疏散门\r\n并且 疏散门 的 Name contains \"外\"\r\n那么 疏散门 的 宽度 > 1400",
+                    "errPairValue": [
+                        "2134691 1230.0"
+                    ],
+                    "ElementInfo": [
+                        "[2134691]门-双扇门--M1222  外门 疏散门 安全出口 疏散外门"
+                    ],
+                    "Reason": "疏散门的宽度为1230.0mm，小于人员密集场所要求的1400mm。"
+                }
+            ],
+            "NaturalLanguage": "人员密集的公共场所、观众厅的疏散门不应设置门槛，其净宽度不应小于1．40m，且紧靠门口内外各1．40m范围内不应设置踏步。    人员密集的公共场所的室外疏散通道的净宽度不应小于3．00m，并应直接通向宽敞地带。"
+        },
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl5.5.21": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"歌舞\" 或 contains \"录像\" 或 contains \"夜总会\" 或 contains \"卡拉OK\" 或 contains \"KTV\" 或 contains \"游艺\" 或 contains \"洗浴\" 或 contains \"桑拿\" 或 contains \"休闲中心\" 或 contains \"歌舞娱乐放映游艺\" 或 contains \"保健\"\r\n并且 建筑 的 总-楼层-个数 = 1\r\n并且 建筑 有 楼层\r\n那么 楼层 的 疏散人数 >=  建筑 的 场所建筑面积 * 0.5",
+                    "errPairValue": [
+                        "DYNAMIC-ELEVATION-(1) (20.0,400.0)"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-ELEVATION-(1)]标高--标高 1"
+                    ],
+                    "Reason": "场所面积大于1000m²，但疏散人数计算结果为20.0，不符合要求。"
+                }
+            ],
+            "NaturalLanguage": "除剧场、电影院、礼堂、体育馆外的其他公共建筑，其房间疏散门、安全出口、疏散走道和疏散楼梯的各自总净宽度，应符合下列规定：1. 每层的房间疏散门、安全出口、疏散走道和疏散楼梯的各自总净宽度，应根据疏散人数按每100 人的最小疏散净宽度不小于表5.5.21-1 的规定计算确定。当每层疏散人数不等时，疏散楼梯的总净宽度可分层计算，地上建筑内下层楼梯的总净宽度应按该层及以上疏散人数最多一层的人数计算；地下建筑内上层楼梯的总净宽度应按该层及以下疏散人数最多一层的人数计算；2. 地下或半地下人员密集的厅、室和歌舞娱乐放映游艺场所，其房间疏散门、安全出口、疏散走道和疏散楼梯的各自总净宽度，应根据疏散人数按每100 人不小于1.00m 计算确定；    3. 首层外门的总净宽度应按该建筑疏散人数最多一层的人数计算确定，不供其他楼层人员疏散的外门，可按本层的疏散人数计算确定；    4. 歌舞娱乐放映游艺场所中录像厅的疏散人数，应根据厅、室的建筑面积按不小于1.0 人/m2 计算；其他歌舞娱乐放映游艺场所的疏散人数，应根据厅、室的建筑面积按不小于0.5 人/m2 计算；    5. 有固定座位的场所，其疏散人数可按实际座位数的1.1 倍计算；6. 展览厅的疏散人数应根据展览厅的建筑面积和人员密度计算，展览厅内的人员密度不宜小于0.75 人/m2；7. 商店的疏散人数应按每层营业厅的建筑面积乘以表5.5.21-2 规定的人员密度计算。对于建材商店、家具和灯饰展示建筑，其人员密度可按表5.5.21-2 规定值30%确定。"
+        },
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl8.3.11": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"餐厅\" 或 contains \"饮食\" 或 contains \"餐饮\"\r\n并且 建筑 的 场所建筑面积 > 1000\r\n并且 建筑 有 房间\r\n并且 房间 的 Name contains \"厨房\" 且 contains \"明火\" 且 notcontains \"无明火\" 且 notcontains \"非明火\"\r\n那么 建筑 有 不少于 1 标签或说明 满足 标签或说明 的 Name contains \"烟罩\" 且 contains \"灭火\" 或 contains \"厨房\" 且 contains \"自动灭火\" 或 contains \"厨房\" 且 contains \"灭火装置\"",
+                    "errPairValue": [],
+                    "ElementInfo": [],
+                    "Reason": "建筑面积大于1000m²的餐饮场所，厨房未设置自动灭火装置。"
+                },
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"餐厅\" 或 contains \"饮食\" 或 contains \"餐饮\"\r\n并且 建筑 的 场所建筑面积 > 1000\r\n并且 建筑 的 场所是否使用燃气 equals \"是\"\r\n那么 建筑 有 不少于 1 标签或说明 满足 标签或说明 的 Name contains \"烟罩\" 且 contains \"灭火\" 或 contains \"厨房\" 且 contains \"自动灭火\" 或 contains \"厨房\" 且 contains \"灭火装置\"",
+                    "errPairValue": [],
+                    "ElementInfo": [],
+                    "Reason": "建筑面积大于1000m²的餐饮场所，使用燃气但未设置自动灭火装置。"
+                },
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"餐厅\" 或 contains \"饮食\" 或 contains \"餐饮\"\r\n并且 建筑 的 场所建筑面积 > 1000\r\n并且 建筑 有 标签\r\n并且 标签 的 Name contains \"厨房\" 且 contains \"明火\" 且 notcontains \"无明火\" 且 notcontains \"非明火\"\r\n那么 建筑 有 不少于 1 标签或说明 满足 标签或说明 的 Name contains \"烟罩\" 且 contains \"灭火\" 或 contains \"厨房\" 且 contains \"自动灭火\" 或 contains \"厨房\" 且 contains \"灭火装置\"",
+                    "errPairValue": [],
+                    "ElementInfo": [],
+                    "Reason": "建筑面积大于1000m²的餐饮场所，厨房有明火作业但未设置自动灭火装置。"
+                }
+            ],
+            "NaturalLanguage": "餐厅建筑面积大于1000m2的餐馆或食堂，其烹饪操作间的排油烟罩及烹饪部位应设置自动灭火装置，并应在燃气或燃油管道上设置与自动灭火装置联动的自动切断装置。食品工业加工场所内有明火作业或高温食用油的食品加工部位宜设置自动灭火装置。"
+        },
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl8.5.3": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"民用\"\r\n并且 建筑 有 楼层\r\n并且 楼层 有 疏散走道\r\n并且 疏散走道 的 走道长度 > 20000 \r\n并且 疏散走道 不 有 风口 且 不 有 风口标签\r\n那么 楼层 有 不少于 1 标签或说明 满足 标签或说明 的 Name contains \"排烟\" 且 contains \"面积\" 或 contains \"开窗\" 且 contains \"面积\" 或 contains \"窗\" 且 contains \"可开启\" 且 contains \"面积\"",
+                    "errPairValue": [
+                        "DYNAMIC-ELEVATION-(1)"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-ELEVATION-(1)]标高--标高 1"
+                    ],
+                    "Reason": "标高1的疏散走道长度超过20000mm，且无有效的排烟设施。"
+                },
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"民用\"\r\n并且 建筑 有 疏散走道\r\n并且 疏散走道 的 走道长度 > 20000 \r\n那么 建筑 有 排烟系统平面图 或 有 排烟系统布置图",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "建筑名称包含'民用'，但无排烟系统平面图或布置图。"
+                },
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"歌舞\" 或 contains \"录像\" 或 contains \"夜总会\" 或 contains \"卡拉OK\" 或 contains \"KTV\" 或 contains \"游艺\" 或 contains \"洗浴\" 或 contains \"桑拿\" 或 contains \"休闲中心\" 或 contains \"歌舞娱乐放映游艺\" 或 contains \"保健\"\r\n并且 建筑 有 楼层\r\n并且 楼层 的 计算标高 = 1 或 = 2 或 = 3\r\n并且 建筑 的 场所建筑面积 > 100\r\n那么 建筑 有 排烟系统平面图 或 有 排烟系统布置图",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "建筑名称包含'歌舞娱乐'，标高1-3层，面积大于100m²，但无排烟系统平面图或布置图。"
+                },
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"歌舞\" 或 contains \"录像\" 或 contains \"夜总会\" 或 contains \"卡拉OK\" 或 contains \"KTV\" 或 contains \"游艺\" 或 contains \"洗浴\" 或 contains \"桑拿\" 或 contains \"休闲中心\" 或 contains \"歌舞娱乐放映游艺\" 或 contains \"保健\"\r\n并且 建筑 有 楼层\r\n并且 楼层 的 计算标高 = 1 或 = 2 或 = 3\r\n并且 建筑 的 场所建筑面积 > 100\r\n并且 楼层 有 房间\r\n并且 房间 的 面积 > 15\r\n并且 房间 不 有 风口 且 不 有 风口标签\r\n那么 楼层 有 不少于 1 标签或说明 满足 标签或说明 的 Name contains \"排烟\" 且 contains \"面积\" 或 contains \"开窗\" 且 contains \"面积\" 或 contains \"窗\" 且 contains \"可开启\" 且 contains \"面积\"",
+                    "errPairValue": [
+                        "DYNAMIC-ELEVATION-(1)"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-ELEVATION-(1)]标高--标高 1"
+                    ],
+                    "Reason": "建筑名称包含'歌舞娱乐'，标高1的房间面积大于15m²，且无有效的排烟设施。"
+                }
+            ],
+            "NaturalLanguage": "民用建筑的下列场所或部位应设置排烟设施：        1 设置在一、二、三层且房间建筑面积大于100m2 的歌舞娱乐放映游艺场所，设置在四层及以上楼层、地下或半地下的歌舞娱乐放映游艺场所；        2 中庭；        3 公共建筑内建筑面积大于100m2 且经常有人停留的地上房间；        4 公共建筑内建筑面积大于300m2 且可燃物较多的地上房间；        5 建筑内长度大于20m 的疏散走道。"
+        },
+        "GB 50140-2005《建筑灭火器配置设计规范》.spl5.2.1": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"公共\"\r\n并且 建筑 的 建筑名称 contains \"娱乐\" 或 contains \"餐饮\"\r\n并且 建筑 的 建筑名称 notcontains \"商铺\"\r\n并且 建筑 有 楼层\r\n并且 楼层 有 灭火器\r\n那么 楼层 的 总-灭火器-个数 >= 楼层 的 总-房间-面积 * 0.00629",
+                    "errPairValue": [
+                        "DYNAMIC-ELEVATION-(1) (2,396.32343)"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-ELEVATION-(1)]标高--标高 1"
+                    ],
+                    "Reason": "公共娱乐餐饮场所，标高1层的灭火器数量不足，计算得2.396个，不符合要求。"
+                }
+            ],
+            "NaturalLanguage": "设置在A类火灾场所的灭火器，其最大保护距离应符合表5.2.1的规定。"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl10.1.9": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"公共\"\r\n并且 建筑 有 楼层\r\n并且 楼层 有 安全出口标志灯\r\n那么 安全出口标志灯 水平边界外小于2400的距离有 应急照明灯",
+                    "errPairValue": [
+                        "(2118307,)"
+                    ],
+                    "ElementInfo": [
+                        "[2118307]指示灯--安全出口标志灯-0"
+                    ],
+                    "Reason": "安全出口标志灯的照射距离超过2400mm，且无应急照明灯。"
+                }
+            ],
+            "NaturalLanguage": "除筒仓、散装粮食仓库和火灾发展缓慢的场所外，厂房、丙类仓库、民用建筑、平时使用的人民防空工程等建筑中的下列部位应设置疏散照明：1 安全出口、疏散楼梯（间）、疏散楼梯间的前室或合用前室、避难走道及其前室、避难层、避难间、消防专用通道、兼作人员疏散的天桥和连廊；2 观众厅、展览厅、多功能厅及其疏散口；3 建筑面积大于200m²的营业厅、餐厅、演播室、售票厅、候车（机、船）厅等人员密集的场所及其疏散口；4 建筑面积大于100m²的地下或半地下公共活动场所；5 地铁工程中的车站公共区，自动扶梯、自动人行道，楼梯，连接通道或换乘通道，车辆基地，地下区间内的纵向疏散平台；6 城市交通隧道两侧，人行横通道或人行疏散通道；7 城市综合管廊的人行道及人员出入口；8 城市地下人行通道。"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl4.3.7": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"公共\"\r\n并且 建筑 的 建筑名称 contains \"歌舞娱乐放映游艺场所\"\r\n那么 建筑 的 总-防火门-个数 > 0",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1 0"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "公共歌舞娱乐场所，总防火门数量为0，不符合要求。"
+                },
+                {
+                    "SNL": "如果 建筑 的 建筑名称 contains \"公共\"\r\n并且 建筑 的 建筑名称 contains \"歌舞娱乐放映游艺场所\"\r\n那么 建筑 有 不少于 1 标签或说明 满足 标签或说明 的 Name regex \"@(隔墙|砖墙)\" 且 regex \"@[2-9]\\d*(\\.*\\d+)?(h|H|小时)\" 或 regex \"@(隔墙|砖墙)\" 且 regex \"@(1[2-9][0-9]|[2-9]\\d{2})(min|分钟)\" 或 contains \"砌块\" 或 contains \"轻质砖\" 或 contains \"砖墙\" 且 regex \"@(隔断|分隔|墙面)\"",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "ElementInfo": [
+                        "[DYNAMIC-BUILDING-1]建筑--建筑"
+                    ],
+                    "Reason": "公共歌舞娱乐场所，未设置耐火极限不低于2.00h的防火隔墙。"
+                }
+            ],
+            "NaturalLanguage": "歌舞娱乐放映游艺场所的布置和分隔应符合下列规定：    1 应布置在地下一层及以上且埋深不大于10m的楼层；    2 当布置在地下一层或地上四层及以上楼层时，每个房间的建筑面积不应大于200㎡；    3 房间之间应采用耐火极限不低于2.00h的防火隔墙分隔；    4 与建筑的其他部位之间应采用防火门、耐火极限不低于2.00h的防火隔墙和耐火极限不低于1.00h的不燃性楼板分隔。"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl6.4.3": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 的 高度 <= 100\r\n并且 建筑 的 建筑名称 contains \"歌舞娱乐\"\r\n并且 建筑 有 楼层\r\n并且 楼层 有 房间\r\n并且 房间 的 Name notcontains \"卫生间\" 且 notcontains \"男卫\" 且 notcontains \"女卫\" 且 notcontains \"厕所\" 且 notcontains \"浴室\" 且 notcontains \"洗浴\" 且 notcontains \"澡堂\" 且 notcontains \"淋浴\" 且 notcontains \"楼梯间\" 且 notcontains \"前室\" 且 notcontains \"电梯\" 且 notcontains \"竖井\" 且 notcontains \"洗手间\" 且 notcontains \"走道\"\r\n并且 楼层 有 非功能空间\r\n并且 非功能空间 的 Name notcontains \"竖井\" 且 notcontains \"楼梯间\" 且 notcontains \"前室\" 且 notcontains \"电梯\"\r\n并且 房间 不 是 非功能空间\r\n并且 房间 有 门\r\n并且 非功能空间 有 门\r\n并且 门 的 Name notcontains \"外\" 且 notcontains \"电梯\"\r\n那么 门 的 Name contains \"乙\" 或 contains \"甲\"",
+                    "errPairValue": [
+                        "2134632 门-推拉门门-推拉门:门-推拉门:sliding_door_9:2134632",
+                        "2134631 门-单扇门门-单扇门:门-单扇门:M1022  疏散门:2134631",
+                        "2134616 门-单扇门门-单扇门:门-单扇门:M0922  疏散门:2134616"
+                    ],
+                    "ElementInfo": [
+                        "[2134616]门-单扇门--M0922  疏散门",
+                        "[2134631]门-单扇门--M1022  疏散门",
+                        "[2134632]门-推拉门--sliding_door_9"
+                    ],
+                    "Reason": "建筑高度不超过100m，歌舞娱乐场所的疏散门未标记为'甲'或'乙'级防火门。"
+                }
+            ],
+            "NaturalLanguage": "除建筑直通室外和屋面的门可采用普通门外，下列部位的门的耐火性能不应低于乙级防火门的要求，且其中建筑高度大于100m的建筑相应部位的门应为甲级防火门：    1 甲、乙类厂房，多层丙类厂房，人员密集的公共建筑和其他高层工业与民用建筑中封闭楼梯间的门；    2 防烟楼梯间及其前室的门；    3 消防电梯前室或合用前室的门；    4 前室开向避难走道的门；    5 地下、半地下及多、高层丁类仓库中从库房通向疏散走道或疏散楼梯的门；    6 歌舞娱乐放映游艺场所中的房间疏散门；    7 从室内通向室外疏散楼梯的疏散门；    8 设置在耐火极限要求不低于2.00h的防火隔墙上的门"
+        }
+    },
+    "consistencySummarySimplified": {
+        "snlCorrectRateInHitSNLs": "一致性审查中有效的 SNL 中通过率 = 0.48",
+        "snlGeneralizedAvailable": "一致性审查中 SNL 有效的总数量 = 25",
+        "snlHitProportion": "一致性审查中 SNL 有效的占比 = 0.14792899408284024",
+        "snlIncorrectRateInHitSNLs": "一致性审查中有效的 SNL 中不通过率 = 0.52",
+        "snlNotPassNumInGeneralizedAvailableSNLs": "一致性审查中有效的 SNL 中不通过的 SNL 数量 = 13",
+        "snlNumConsistency": "一致性审查中 SNL 总数量 = 169",
+        "snlPassNumInGeneralizedAvailableSNLs": "一致性审查中有效的 SNL 中通过的 SNL 数量 = 12",
+        "summaryStr": "总结 = 在本次审查中，共对 169 条 SNL 进行了一致性审查\n其中，共有 25 条 SNL 有效，占比 14.8 %\n在一致性审查有效的 SNL 中，共有 12 条 SNL 通过，占所有有效的 SNL 的 48.0 %\n在一致性审查有效的 SNL 中，共有 13 条 SNL 不通过，占所有有效的 SNL 的 52.0 %"
+    },
+    "consistencySummarySimplifiedForArticle": {
+        "articleCorrectRateInHitArticles": "一致性审查中有效的条文中通过率 = 0.4",
+        "articleGeneralizedAvailable": "一致性审查中条文有效的总数量 = 15",
+        "articleHitProportion": "一致性审查中条文有效的占比 = 0.42857142857142855",
+        "articleIncorrectRateInHitArticles": "一致性审查中有效的条文中不通过率 = 0.6",
+        "articleNotPassNumInGeneralizedAvailableArticles": "一致性审查中有效的条文中不通过的条文数量 = 9",
+        "articleNumConsistency": "一致性审查中条文总数量 = 35",
+        "articlePassNumInGeneralizedAvailableArticles": "一致性审查中有效的条文中通过的条文数量 = 6",
+        "summaryStr": "总结 = 在本次审查中，共对 35 条条文进行了一致性审查\n其中，共有 15 条条文有效，占比 42.9 %\n在一致性审查有效的条文中，共有 6 条条文通过，占所有有效的条文的 40.0 %\n在一致性审查有效的条文中，共有 9 条条文不通过，占所有有效的条文的 60.0 %"
+    }
+}
