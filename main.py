@@ -2,6 +2,7 @@ import json
 import requests
 from ops import *
 from llm_config import *
+from visualize import visualize_bounding_boxes
 
 '''
 @author: isXSong
@@ -10,9 +11,9 @@ from llm_config import *
 '''
 
 default_llm = modules['tuzhi-70B']				#默认模型选择，参看llm_config.py
-origin_jsonfile = "./2/report2.json"				#原始json审查数据
-save_reasonal_jsonfile = "./2/reasonal2.json"		#保存整合了原因的json审查数据，设置为空字符串则不保存
-save_reportfile = "./2/report2.txt"				#保存自然语言报告
+origin_jsonfile = "./1/report1_new.json"				#原始json审查数据
+save_reasonal_jsonfile = "./1/reasonal1_new.json"		#保存整合了原因的json审查数据，设置为空字符串则不保存
+save_reportfile = "./1/report1_new.txt"				#保存自然语言报告
 stream_output = True	#是否同时流式输出到控制台
 
 def get_llm_response(messages, llm = default_llm) -> str:
@@ -91,10 +92,11 @@ def generate_report(jsondata) -> str:
 	sys_msg = prompt_GenerateReport
 	msg = [
 		{"role": "system", "content" : sys_msg},
+		{"role": "user", "content": report_format},
 		{"role": "user", "content": user_msg}
 	]
 	resp = get_llm_response(msg)
-	return resp
+	return resp.split('</think>')[1]
 
 if __name__ == "__main__":
 	#载入并过滤原始json数据
@@ -108,4 +110,3 @@ if __name__ == "__main__":
 	report = generate_report(jsondata)
 	with open(save_reportfile, 'w', encoding='utf-8') as f:
 		f.write(report)
-	
