@@ -11,9 +11,9 @@ from visualize import visualize_bounding_boxes
 '''
 
 default_llm = modules['tuzhi-70B']				#默认模型选择，参看llm_config.py
-origin_jsonfile = "./1/report1_new.json"				#原始json审查数据
-save_reasonal_jsonfile = "./1/reasonal1_new.json"		#保存整合了原因的json审查数据，设置为空字符串则不保存
-save_reportfile = "./1/report1_new.txt"				#保存自然语言报告
+origin_jsonfile = "./3/report3.json"				#原始json审查数据
+save_reasonal_jsonfile = "./3/reasonal3.json"		#保存整合了原因的json审查数据，设置为空字符串则不保存
+save_reportfile = "./3/report3.txt"				#保存自然语言报告
 stream_output = True	#是否同时流式输出到控制台
 
 def get_llm_response(messages, llm = default_llm) -> str:

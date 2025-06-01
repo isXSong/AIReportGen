@@ -16,11 +16,11 @@ tuzhi_dpsk = {
 }
 
 modules = {
-	"thudpsk-32B" : thudpsk | {'model' : 'DeepSeek-R1-Distill-32B'},
-	"thudpsk-671B" : thudpsk | {'model' : 'DeepSeek-R1-671B'},
-	"dpsk-chat" : dpsk | {'model' : 'deepseek-chat'},
-	"dpsk-reasoner" : dpsk | {'model' : 'deepseek-reasoner'},
-	"tuzhi-70B" : tuzhi_dpsk | {'model' : 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B'}
+    "thudpsk-32B": thudpsk | {'model': 'DeepSeek-R1-Distill-32B'},
+    "thudpsk-671B": thudpsk | {'model': 'DeepSeek-R1-671B'},
+    "dpsk-chat": dpsk | {'model': 'deepseek-chat'},
+    "dpsk-reasoner": dpsk | {'model': 'deepseek-reasoner'},
+    "tuzhi-70B": tuzhi_dpsk | {'model': 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B'}
 }
 
 prompt_GetReason = '''
@@ -34,7 +34,8 @@ prompt_GetReason = '''
 需求说明：请你根据这些信息，为每个'SNLTask'生成一段简明扼要的自然语言(约40-100字)，面向用户直接说明审查不通过的原因，简短易懂为要，不要使用太过专业、晦涩的术语，不要引用构件编号（因为编号不是面向用户的），不要使用冗余的语气修饰和措辞。一些正向的例子比如'二楼厨房未按规定设置防火门'，'营业厅疏散通道的宽度为0.5m，小于规范要求的1.0m'，'歌舞厅作为人员密集的公共场所，疏散门不应设置门槛'，'餐馆面积大于1000m2，按规定其烹饪操作间的排油烟罩需要设置自动灭火装置。'等。
 格式说明：为了方便程序识别提取，请以json格式输出一个字典，json中的每个键是'SNLTask'的'id'，值是你为该'SNLTask'生成的错误原因描述, 并确保json数据前有‘```json’标识
 '''
-##例如'二楼厨房未按规定设置防火门'，'营业厅的疏散通道A01宽度为0.5m，小于规范要求的1.0m'，'人员密集的公共场所、观众厅的疏散门不应设置门槛，其净宽度不应小于1．40m'等，不要使用太过专业、晦涩或冗长的术语，不要添加'经核查/按第xx.xx条规定'等冗余措辞
+
+
 
 prompt_GenerateReport = '''
 **数据说明**：用户将会提供一段Json数据，这段数据存储了某建筑的消防审查数据，其中包括三个对象：FailedResults'存储审查的结果，'consistencySummarySimplified'对象和'consistencySummarySimplifiedForArticle'是不同尺度下对通过率的机器统计。
@@ -52,13 +53,20 @@ prompt_GenerateReport = '''
 
 report_format = '''
 以下是报告格式：
-**审查情况总述**：{data_description}
-**分类展示审查结果**：
-类型（可自行按位置或错误类型分类、可以合并必要的相似项）：{error_type}
--{错误}：{错误描述}
-	>> 构件名称：...
-	>> 构件位置：...
-	>> 涉及条文名称：....
-	>> 原文选摘：简短即可，但必须严格忠于原文，只摘录条规原文中和错误最相关的部分，容许用省略号跳跃不太相干的部分
-**整改建议**：{review_summary}
+
+## 审查情况总述：.....
+
+## 分类展示审查结果**：.....
+**{错误类别（自行归类）}：**
+1.{错误名}：{错误描述}
+	- 构件名称：...
+	- 构件位置：...
+	- 涉及条文名称：....
+	- 原文选摘：简短即可，但必须严格忠于原文，只摘录条规原文中和错误最相关的部分，容许用省略号跳跃不太相干的部分
+2.{错误名}：{错误描述}
+	.......
+**{错误类别（自行归类）}：**
+.....
+
+**整改建议**：.....
 '''

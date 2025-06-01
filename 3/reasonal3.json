@@ -1,0 +1,146 @@
+{
+    "FailedResults": {
+        "GB 50016-2014《建筑设计防火规范》（2018年版）.spl6.4.3": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 防烟楼梯间 边界有 门\n并且 前室 边界有 门\n那么 门 的 Name contains \"乙\" 或 contains \"甲\"",
+                    "errPairValue": [
+                        "83634 门-双扇门门-双扇门:门-双扇门:FM  疏散门 安全出口 防火门:83634"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "83634": "[左下(x=89854.0, y=41266.0, z=3000000.0)]门-双扇门--FM  疏散门 安全出口 防火门"
+                    },
+                    "Reason": "防烟楼梯间前室的门未按规定标注\"乙\"或\"甲\"级防火门。"
+                }
+            ],
+            "NaturalLanguage": "防烟楼梯间除应符合本规范第6.4.1条的规定外，尚应符合下列规定：1应设置防烟设施；2前室可与消防电梯间前室合用；3前室的使用面积：公共建筑、高层厂房（仓库），不应小于6.0m2；住宅建筑，不应小于4.5m2。与消防电梯间前室合用时，合用前室的使用面积：公共建筑、高层厂房（仓库），不应小于10.0m2；住宅建筑，不应小于6.0m2；4疏散走道通向前室以及前室通向楼梯间的门应采用乙级防火门；5除楼梯间和前室的出入口、楼梯间和前室内设置的正压送风口和住宅建筑的楼梯间前室外，防烟楼梯间和前室的墙上不应开设其他门、窗、洞口；6楼梯间的首层可将走道和门厅等包括在楼梯间前室内形成扩大的前室，但应采用乙级防火门等与其它走道和房间分隔。"
+        },
+        "GB 50974-2014《消防给水及消火栓系统技术规范》.spl7.4.5": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 有 前室\r\n并且 前室 的 Name contains \"消防电梯\"\r\n那么 前室 有 消火栓",
+                    "errPairValue": [
+                        "83607"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "83607": "[左下(x=88672.5, y=38481.0, z=3000000.0)]房间--合用前室兼3#客梯消防电梯4#客梯  前室 独立前室"
+                    },
+                    "Reason": "消防电梯前室未设置消火栓。"
+                }
+            ],
+            "NaturalLanguage": "消防电梯前室应设置室内消火栓，并应计入消火栓使用数量。"
+        },
+        "GB 55036-2022《消防设施通用规范》.spl10.0.3": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 有 计算单元\r\n那么 计算单元 的 总-灭火器-个数 >= 2",
+                    "errPairValue": [
+                        "84553 0"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "84553": "[左下(x=66125.5, y=40147.5, z=3000000.0)]面积--防火分区0 计算单元"
+                    },
+                    "Reason": "计算单元内的灭火器数量不足，少于最低要求的2具。"
+                }
+            ],
+            "NaturalLanguage": "灭火器配置场所应按计算单元计算与配置灭火器，并应符合下列规定：1 计算单元中每个灭火器设置点的灭火器配置数量应根据配置场所内的可燃物分布情况确定。所有设置点配置的灭火器灭火级别之和不应小于该计算单元的保护面积与单位灭火级别最大保护面积的比值。2 一个计算单元内配置的灭火器数量应经计算确定且不应少于2具。"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl10.1.10": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 有 楼梯间\r\n那么 建筑 有 不少于 1 说明文本 满足 说明文本 的 Name contains \"楼梯\" 且 contains \"照度\"",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "DYNAMIC-BUILDING-1": "[无位置信息]建筑--建筑"
+                    },
+                    "Reason": "建筑内未设置关于楼梯间照度的说明文本。"
+                },
+                {
+                    "SNL": "如果 建筑 有 楼梯间\r\n并且 建筑 有 前室\r\n并且 前室 有 门\r\n并且 楼梯间 有 门\r\n那么 建筑 有 不少于 1 说明文本 满足 说明文本 的 Name contains \"楼梯间\" 且 contains \"前室\" 且 contains \"照度\"",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "DYNAMIC-BUILDING-1": "[无位置信息]建筑--建筑"
+                    },
+                    "Reason": "楼梯间前室未设置关于楼梯间和前室照度的说明文本。"
+                },
+                {
+                    "SNL": "如果 建筑 有 前室\r\n并且 前室 的 Name contains \"合用\"\r\n那么 建筑 有 不少于 1 说明文本 满足 说明文本 的 Name contains \"前室\" 且 contains \"照度\"",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "DYNAMIC-BUILDING-1": "[无位置信息]建筑--建筑"
+                    },
+                    "Reason": "合用前室未设置关于前室照度的说明文本。"
+                }
+            ],
+            "NaturalLanguage": "建筑内疏散照明的地面最低水平照度应符合下列规定：1 疏散楼梯间、疏散楼梯间的前室或合用前室、避难走道及其前室、避难层、避难间、消防专用通道，不应低于10.0lx；2 疏散走道、人员密集的场所，不应低于3.0lx；3 本条上述规定场所外的其他场所，不应低于1.0lx。"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl6.4.4": {
+            "CheckResults": [
+                {
+                    "SNL": "如果 建筑 有 竖井\r\n并且 竖井 的 Name notcontains \"电梯\"\r\n并且 竖井 边界有 门\r\n那么 门 的 Name contains \"甲\" 或 contains \"乙\" 或 contains \"丙\"",
+                    "errPairValue": [
+                        "83658 门-双扇门门-双扇门:门-双扇门:M_12:83658",
+                        "83679 门-双扇门门-双扇门:门-双扇门:M_11:83679",
+                        "83612 门-双扇门门-双扇门:门-双扇门:M_10:83612"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "83679": "[左下(x=48628.5, y=35700.0, z=3000000.0)]门-双扇门--M_11",
+                        "83612": "[左下(x=90995.0, y=35713.5, z=3000000.0)]门-双扇门--M_10",
+                        "83658": "[左下(x=42937.0, y=35646.0, z=3000000.0)]门-双扇门--M_12"
+                    },
+                    "Reason": "非电梯竖井的门未标注甲、乙或丙级防火门。"
+                }
+            ],
+            "NaturalLanguage": "电气竖井、管道井、排烟道、排气道、垃圾道等竖井井壁上的检查门，应符合下列规定：1. 对于埋深大于10m的地下建筑或地下工程，应为甲级防火门；2. 对于建筑高度大于100m的建筑，应为甲级防火门；3. 对于层间无防火分隔的竖井和住宅建筑的合用前室，门的耐火性能不应低于乙级防火门的要求；4. 对于其他建筑，门的耐火性能不应低于丙级防火门的要求，当竖井在楼层处无水平防火分隔时，门的耐火性能不应低于乙级防火门的要求。"
+        },
+        "GB 55037-2022《建筑防火通用规范》.spl8.1.1": {
+            "CheckResults": [
+                {
+                    "SNL": "所有 建筑 有 灭火器",
+                    "errPairValue": [
+                        "DYNAMIC-BUILDING-1"
+                    ],
+                    "taskResultDiffs": [],
+                    "ElementInfo": {
+                        "DYNAMIC-BUILDING-1": "[无位置信息]建筑--建筑"
+                    },
+                    "Reason": "建筑内未配置灭火器。"
+                }
+            ],
+            "NaturalLanguage": "建筑应设置与其建筑高度（埋深），体积、面积、长度，火灾危险性，建筑附近的消防力量布置情况，环境条件等相适应的消防给水设施、灭火设施和器材。除地铁区间、综合管廊的燃气舱和住宅建筑套内可不配置灭火器外，建筑内应配置灭火器。"
+        }
+    },
+    "consistencySummarySimplified": {
+        "snlCorrectRateInHitSNLs": "一致性审查中有效的 SNL 中通过率 = 0.6923076923076923",
+        "snlGeneralizedAvailable": "一致性审查中 SNL 有效的总数量 = 26",
+        "snlHitProportion": "一致性审查中 SNL 有效的占比 = 0.012664393570384803",
+        "snlIncorrectRateInHitSNLs": "一致性审查中有效的 SNL 中不通过率 = 0.3076923076923077",
+        "snlNotPassNumInGeneralizedAvailableSNLs": "一致性审查中有效的 SNL 中不通过的 SNL 数量 = 8",
+        "snlNumConsistency": "一致性审查中 SNL 总数量 = 2053",
+        "snlPassNumInGeneralizedAvailableSNLs": "一致性审查中有效的 SNL 中通过的 SNL 数量 = 18",
+        "summaryStr": "总结 = 在本次审查中，共对 2053 条 SNL 进行了一致性审查\n其中，共有 26 条 SNL 有效，占比 1.3 %\n在一致性审查有效的 SNL 中，共有 18 条 SNL 通过，占所有有效的 SNL 的 69.2 %\n在一致性审查有效的 SNL 中，共有 8 条 SNL 不通过，占所有有效的 SNL 的 30.8 %"
+    },
+    "consistencySummarySimplifiedForArticle": {
+        "articleCorrectRateInHitArticles": "一致性审查中有效的条文中通过率 = 0.6666666666666666",
+        "articleGeneralizedAvailable": "一致性审查中条文有效的总数量 = 18",
+        "articleHitProportion": "一致性审查中条文有效的占比 = 0.05732484076433121",
+        "articleIncorrectRateInHitArticles": "一致性审查中有效的条文中不通过率 = 0.3333333333333333",
+        "articleNotPassNumInGeneralizedAvailableArticles": "一致性审查中有效的条文中不通过的条文数量 = 6",
+        "articleNumConsistency": "一致性审查中条文总数量 = 314",
+        "articlePassNumInGeneralizedAvailableArticles": "一致性审查中有效的条文中通过的条文数量 = 12",
+        "summaryStr": "总结 = 在本次审查中，共对 314 条条文进行了一致性审查\n其中，共有 18 条条文有效，占比 5.7 %\n在一致性审查有效的条文中，共有 12 条条文通过，占所有有效的条文的 66.7 %\n在一致性审查有效的条文中，共有 6 条条文不通过，占所有有效的条文的 33.3 %"
+    }
+}

@@ -45,8 +45,8 @@ def draw_boxes(boxes: dict, max_box: list):
     # rect_max = Rectangle((max_box[0], max_box[1]), max_box[3]-max_box[0], max_box[4] - max_box[1]
     #                      , linewidth=1, edgecolor='black', facecolor='none')
     # ax.add_patch(rect_max)
-    format_t = {'linewidth' : 1, 'edgecolor': 'black', 'facecolor': 'green', 'alpha': 0.2}
-    format_f = {'linewidth' : 1, 'edgecolor': 'black', 'facecolor': 'red', 'alpha': 0.8}
+    format_t = {'linewidth' : 1, 'edgecolor': 'black', 'facecolor': 'none', 'alpha': 0.2}
+    format_f = {'linewidth' : 1, 'edgecolor': 'red', 'facecolor': 'none', 'alpha': 0.8}
     for id, box in boxes.items():
         width = box[3] - box[0]
         height = box[4] - box[1]
